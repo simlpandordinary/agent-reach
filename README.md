@@ -12,18 +12,88 @@
 
 ## 技能说明
 
->
+只读读取各平台内容：搜索、读帖、看评论、取字幕、查行情和职位。 Use when 用户提到或贴出链接：小红书/xiaohongshu、B站/bilibili、Twitter/X、Reddit、 YouTube（字幕、转录）、GitHub、V2EX、雪球/股票行情、LinkedIn/Boss直聘 职位、 Instagram、Facebook、小宇宙播客；或说"帮我搜/看看/读一下这个链接"而自带网页搜索/读取不可用、失败或拿不到正文； 或要安装、加上/去掉某个平台、登录/退出、看状态、更新、卸载 Agent Reach。 不做：发帖、评论、点赞、私信等任何写操作；不替用户登录、不索要密码。 公开内容优先用 Agent 自带工具，Reach 补缺口。
 
 ## 目录结构
 
 ```
-['SKILL.md', 'SKILL_en.md', 'references/capabilities.md', 'references/maintenance.md', 'references/sessions.md', 'agent_reach/__init__.py', 'agent_reach/backends/__init__.py', 'agent_reach/backends/boss_native.py', 'agent_reach/backends/cloak.py', 'agent_reach/backends/opencli.py', 'agent_reach/channels/__init__.py', 'agent_reach/channels/_opencli_site.py', 'agent_reach/channels/base.py', 'agent_reach/channels/bilibili.py', 'agent_reach/channels/boss.py', 'agent_reach/channels/facebook.py', 'agent_reach/channels/github.py', 'agent_reach/channels/instagram.py', 'agent_reach/channels/linkedin.py', 'agent_reach/channels/reddit.py', 'agent_reach/channels/twitter.py', 'agent_reach/channels/v2ex.py', 'agent_reach/channels/web.py', 'agent_reach/channels/xiaohongshu.py', 'agent_reach/channels/xiaoyuzhou.py', 'agent_reach/channels/xueqiu.py', 'agent_reach/channels/youtube.py', 'agent_reach/cli.py', 'agent_reach/config.py', 'agent_reach/runtime/__init__.py', 'agent_reach/runtime/bridge.py', 'agent_reach/runtime/browser.py', 'agent_reach/runtime/browser_binding.py', 'agent_reach/runtime/browser_watcher.py', 'agent_reach/runtime/cdp.py', 'agent_reach/runtime/cli.py', 'agent_reach/runtime/clock.py', 'agent_reach/runtime/dispatch.py', 'agent_reach/runtime/legacy.py', 'agent_reach/runtime/manage.py', 'agent_reach/runtime/onboarding.py', 'agent_reach/runtime/public_web.py', 'agent_reach/runtime/result.py', 'agent_reach/runtime/run.py', 'agent_reach/runtime/session_reuse.py', 'agent_reach/runtime/sessions.py', 'agent_reach/runtime/state.py', 'agent_reach/runtime/tools.py', 'agent_reach/runtime/update_notice.py', 'agent_reach/scripts/transcribe_xiaoyuzhou.sh', 'agent_reach/transcribe.py', 'agent_reach/utils/paths.py', 'agent_reach/utils/process.py', 'agent_reach/utils/text.py', 'agent_reach/utils/url.py', 'scripts/accept-search.py', 'scripts/check_release_acceptance.py', 'scripts/record_release_acceptance.py', 'pyproject.toml', 'constraints.txt', 'llms.txt', 'README.upstream.md', 'LICENSE']
+├── LICENSE
+├── README.upstream.md
+├── SKILL.md
+├── SKILL_en.md
+├── constraints.txt
+├── llms.txt
+├── pyproject.toml
+├── scripts/
+├── accept-search.py
+├── check_release_acceptance.py
+└── record_release_acceptance.py
+├── references/
+├── capabilities.md
+├── maintenance.md
+└── sessions.md
+└── agent_reach/
+├── __init__.py
+├── cli.py
+├── config.py
+├── transcribe.py
+├── utils/
+├── paths.py
+├── process.py
+├── text.py
+└── url.py
+├── scripts/
+└── transcribe_xiaoyuzhou.sh
+├── runtime/
+├── __init__.py
+├── bridge.py
+├── browser.py
+├── browser_binding.py
+├── browser_watcher.py
+├── cdp.py
+├── cli.py
+├── clock.py
+├── dispatch.py
+├── legacy.py
+├── manage.py
+├── onboarding.py
+├── public_web.py
+├── result.py
+├── run.py
+├── session_reuse.py
+├── sessions.py
+├── state.py
+├── tools.py
+└── update_notice.py
+├── channels/
+├── __init__.py
+├── _opencli_site.py
+├── base.py
+├── bilibili.py
+├── boss.py
+├── facebook.py
+├── github.py
+├── instagram.py
+├── linkedin.py
+├── reddit.py
+├── twitter.py
+├── v2ex.py
+├── web.py
+├── xiaohongshu.py
+├── xiaoyuzhou.py
+├── xueqiu.py
+└── youtube.py
+└── backends/
+├── __init__.py
+├── boss_native.py
+├── cloak.py
+└── opencli.py
 ```
 
 - `SKILL.md` 是技能入口（触发条件 / 工作流 / 约束），安装时必须位于技能根目录。
 - `references/`、`scripts/`、`assets/` 为该技能自带的参考文档、脚本与素材。
 - `README.upstream.md` 为上游仓库原始说明，保留出处与版权信息。
-- `LICENSE` 为上游许可证原文。
+- `LICENSE` 为上游许可证原件。
 
 ## 安装
 
@@ -36,8 +106,6 @@ git clone https://github.com/simlpandordinary/agent-reach.git ~/.workbuddy/skill
 也可以直接对 AI 说：「把 <https://github.com/simlpandordinary/agent-reach> 装成 Skill」。
 
 安装后用自然语言触发，例如「Agent-Reach（给 AI 装眼睛）」「用 agent-reach 帮我处理这个任务」。
-
-
 
 ## 版权
 
