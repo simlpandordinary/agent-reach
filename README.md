@@ -25,69 +25,69 @@
 ├── llms.txt
 ├── pyproject.toml
 ├── scripts/
-├── accept-search.py
-├── check_release_acceptance.py
-└── record_release_acceptance.py
+│   ├── accept-search.py
+│   ├── check_release_acceptance.py
+│   └── record_release_acceptance.py
 ├── references/
-├── capabilities.md
-├── maintenance.md
-└── sessions.md
+│   ├── capabilities.md
+│   ├── maintenance.md
+│   └── sessions.md
 └── agent_reach/
-├── __init__.py
-├── cli.py
-├── config.py
-├── transcribe.py
-├── utils/
-├── paths.py
-├── process.py
-├── text.py
-└── url.py
-├── scripts/
-└── transcribe_xiaoyuzhou.sh
-├── runtime/
-├── __init__.py
-├── bridge.py
-├── browser.py
-├── browser_binding.py
-├── browser_watcher.py
-├── cdp.py
-├── cli.py
-├── clock.py
-├── dispatch.py
-├── legacy.py
-├── manage.py
-├── onboarding.py
-├── public_web.py
-├── result.py
-├── run.py
-├── session_reuse.py
-├── sessions.py
-├── state.py
-├── tools.py
-└── update_notice.py
-├── channels/
-├── __init__.py
-├── _opencli_site.py
-├── base.py
-├── bilibili.py
-├── boss.py
-├── facebook.py
-├── github.py
-├── instagram.py
-├── linkedin.py
-├── reddit.py
-├── twitter.py
-├── v2ex.py
-├── web.py
-├── xiaohongshu.py
-├── xiaoyuzhou.py
-├── xueqiu.py
-└── youtube.py
-└── backends/
-├── __init__.py
-├── boss_native.py
-├── cloak.py
-└── opencli.py
+    ├── __init__.py
+    ├── cli.py
+    ├── config.py
+    ├── transcribe.py
+    ├── utils/
+    │   ├── paths.py
+    │   ├── process.py
+    │   ├── text.py
+    │   └── url.py
+    ├── scripts/
+    │   └── transcribe_xiaoyuzhou.sh
+    ├── runtime/
+    │   ├── __init__.py
+    │   ├── bridge.py
+    │   ├── browser.py
+    │   ├── browser_binding.py
+    │   ├── browser_watcher.py
+    │   ├── cdp.py
+    │   ├── cli.py
+    │   ├── clock.py
+    │   ├── dispatch.py
+    │   ├── legacy.py
+    │   ├── manage.py
+    │   ├── onboarding.py
+    │   ├── public_web.py
+    │   ├── result.py
+    │   ├── run.py
+    │   ├── session_reuse.py
+    │   ├── sessions.py
+    │   ├── state.py
+    │   ├── tools.py
+    │   └── update_notice.py
+    ├── channels/
+    │   ├── __init__.py
+    │   ├── _opencli_site.py
+    │   ├── base.py
+    │   ├── bilibili.py
+    │   ├── boss.py
+    │   ├── facebook.py
+    │   ├── github.py
+    │   ├── instagram.py
+    │   ├── linkedin.py
+    │   ├── reddit.py
+    │   ├── twitter.py
+    │   ├── v2ex.py
+    │   ├── web.py
+    │   ├── xiaohongshu.py
+    │   ├── xiaoyuzhou.py
+    │   ├── xueqiu.py
+    │   └── youtube.py
+    └── backends/
+        ├── __init__.py
+        ├── boss_native.py
+        ├── cloak.py
+        └── opencli.py
 ```
 
 - `SKILL.md` 是技能入口（触发条件 / 工作流 / 约束），安装时必须位于技能根目录。
